@@ -3,7 +3,7 @@
 set -euo pipefail
 
 VIM_PLUGIN_DIR="$HOME/.vim/pack/git-plugins/start"
-declare -a VIM_PLUGINS=("dense-analysis/ale")
+declare -a VIM_PLUGINS=("dense-analysis/ale" "cespare/vim-toml")
 
 if [ ! -d "$VIM_PLUGIN_DIR" ]; then
     mkdir -p "$VIM_PLUGIN_DIR"

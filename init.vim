@@ -24,12 +24,12 @@ call plug#begin()
 call plug#end()
 
 let s:mode = systemlist("defaults read -g AppleInterfaceStyle")[0]
-if s:mode ==? "dark"
-    set background=dark
-    colorscheme palenight
-else
+if s:mode ==? "light"
     set background=light
     colorscheme gruvbox
+else
+    set background=dark
+    colorscheme palenight
 endif
 
 if (has("nvim"))

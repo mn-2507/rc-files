@@ -87,7 +87,13 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Close the editor if NerdTree
 " is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-b> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+" Search files
+nnoremap <silent> <C-f> :Files<CR>
+" Do not match filenames when searching in files
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" Search in files
+nnoremap <silent> <Leader>f :Rg<CR>
 
 " Always wrap long lines
 set wrap

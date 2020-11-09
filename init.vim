@@ -23,13 +23,12 @@ call plug#begin()
     Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-let s:mode = systemlist("defaults read -g AppleInterfaceStyle")[0]
-if s:mode ==? "light"
-    set background=light
-    colorscheme gruvbox
-else
+colorscheme gruvbox
+let s:mode = systemlist("osascript -e 'tell application \"System Events\" to tell appearance preferences to return dark mode'")[0]
+if s:mode ==? "true"
     set background=dark
-    colorscheme palenight
+else
+    set background=light
 endif
 
 if (has("nvim"))

@@ -7,7 +7,7 @@ endif
 
 call plug#begin()
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-    let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python']
+    let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python', 'coc-docker', 'coc-rls', 'coc-yaml', 'coc-sourcekit']
     Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'drewtempelmeyer/palenight.vim'
     Plug 'morhetz/gruvbox'
@@ -25,12 +25,7 @@ call plug#begin()
 call plug#end()
 
 colorscheme gruvbox
-let s:mode = systemlist("osascript -e 'tell application \"System Events\" to tell appearance preferences to return dark mode'")[0]
-if s:mode ==? "true"
-    set background=dark
-else
-    set background=light
-endif
+set background=dark
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -52,6 +47,10 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 let g:coc_user_config = {}
 let g:coc_user_config['coc.preferences.jumpCommand'] = 'sp'
 let g:coc_user_config['coc.preferences.formatOnSaveFiletypes'] = ['javascript', 'typescript', 'css', 'markdown', 'json']
+let g:coc_user_config['python.linting.flake8Path'] = "~/.local/bin/flake8"
+let g:coc_user_config['python.linting.pylintEnabled'] = 0 
+let g:coc_user_config['python.linting.flake8Enabled'] = 1
+let g:coc_user_config['python.linting.enabled'] = 1
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)

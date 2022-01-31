@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/michal/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,12 +114,12 @@ source <(kubectl completion zsh)
 
 eval "$(register-python-argcomplete pipx)"
 # Created by `pipx` on 2021-04-01 18:50:33
-export PATH="$PATH:/Users/michal/.local/bin:/Users/michal/Library/Python/3.9/bin"
+export PATH="$PATH:$HOME/.local/bin:/Users/michal/Library/Python/3.9/bin"
 
 # opam configuration
-test -r /Users/michal/.opam/opam-init/init.zsh && . /Users/michal/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-export DEV="/Users/michal/Developer"
+export DEV="$HOME/Developer"
 
 alias bfzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 

@@ -112,6 +112,18 @@ set +o histverify
 
 source <(kubectl completion zsh)
 
+alias gb='git branch -vv'
+alias gl='git pull --prune'
+alias gap='git add -p'
+alias grom='git rebase origin/main'
+alias gcmwip='git commit -m "WIP"'
+alias gpsu='git push --set-upstream'
+alias gcp='git cherry-pick'
+
+function grH() {
+  git reset HEAD~$1
+}
+
 eval "$(register-python-argcomplete pipx)"
 # Created by `pipx` on 2021-04-01 18:50:33
 export PATH="$PATH:$HOME/.local/bin:/Users/michal/Library/Python/3.9/bin"

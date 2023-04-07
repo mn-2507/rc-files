@@ -1,10 +1,11 @@
-require "michal.options"
-require "michal.keymaps"
-require "michal.plugins"
-require "michal.colorscheme"
-require "michal.cmp"
-require "michal.lsp"
-require "michal.treesitter"
-require "michal.toggleterm"
-require "michal.telescope"
-require "michal.trouble"
+require("michal.options")
+require("michal.keymaps")
+require("michal.plugins")
+require("michal.colorscheme")
+require("michal.cmp")
+require("michal.lsp")
+require("michal.treesitter")
+require("michal.toggleterm")
+require("michal.telescope")
+require("michal.trouble")
+require("michal.neo-tree")

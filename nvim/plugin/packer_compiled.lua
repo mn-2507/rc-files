@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/michal/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/michal/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -146,6 +151,12 @@ _G.packer_plugins = {
     path = "/Users/michal/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-cokeline"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcokeline\frequire\0" },
+    loaded = true,
+    path = "/Users/michal/.local/share/nvim/site/pack/packer/start/nvim-cokeline",
+    url = "https://github.com/willothy/nvim-cokeline"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/michal/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -216,10 +227,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\n�\4\0\0\a\0 \00056\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0006\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\0025\3\r\0004\4\3\0005\5\n\0005\6\v\0=\6\f\5>\5\1\4=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0034\4\0\0=\4\19\0035\4\20\0=\4\21\0034\4\3\0005\5\22\0005\6\23\0=\6\f\5>\5\1\4=\4\24\3=\3\25\0025\3\27\0005\4\26\0=\4\14\0034\4\0\0=\4\16\0034\4\0\0=\4\18\0034\4\0\0=\4\19\0034\4\0\0=\4\21\0035\4\28\0=\4\24\3=\3\29\0024\3\0\0=\3\30\0024\3\0\0=\3\31\2B\0\2\1K\0\1\0\15extensions\ftabline\22inactive_sections\1\2\0\0\rlocation\1\0\0\1\2\0\0\rfilename\rsections\14lualine_z\1\0\1\nright\b\1\2\1\0\rlocation\17left_padding\3\2\14lualine_y\1\3\0\0\rfiletype\rprogress\14lualine_x\14lualine_c\1\2\0\0\15fileformat\14lualine_b\1\3\0\0\rfilename\vbranch\14lualine_a\1\0\0\14separator\1\0\1\tleft\b\1\2\1\0\tmode\18right_padding\3\2\foptions\1\0\0\23section_separators\1\0\2\nright\b\tleft\b\ntheme\18bubbles_theme\1\0\1\25component_separators\6|\nsetup\flualine\frequire\0", "config", "lualine.nvim")
@@ -232,6 +239,14 @@ time([[Config for which-key.nvim]], false)
 time([[Config for nvim-window-picker]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18window-picker\frequire\0", "config", "nvim-window-picker")
 time([[Config for nvim-window-picker]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-cokeline
+time([[Config for nvim-cokeline]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcokeline\frequire\0", "config", "nvim-cokeline")
+time([[Config for nvim-cokeline]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

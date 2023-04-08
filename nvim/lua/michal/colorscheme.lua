@@ -6,3 +6,4 @@ if not status_ok then
 	return
 end
 vim.opt.background = "dark"
+vim.opt.termguicolors = true

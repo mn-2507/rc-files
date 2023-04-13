@@ -7,6 +7,11 @@ local lspconfig = require("lspconfig")
 lspconfig.pyright.setup{}
 lspconfig.tsserver.setup{}
 lspconfig.lua_ls.setup{}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+lspconfig.cssls.setup{
+	capabilities = capabilities,
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

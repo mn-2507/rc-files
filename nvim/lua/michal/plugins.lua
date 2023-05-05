@@ -43,6 +43,12 @@ return packer.startup(function(use)
 	use("ellisonleao/gruvbox.nvim")
 	use("nvim-lua/popup.nvim")
 	use("windwp/nvim-autopairs")
+	use({
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end
+	})
 
 	-- Snippets
 	use("hrsh7th/nvim-cmp")

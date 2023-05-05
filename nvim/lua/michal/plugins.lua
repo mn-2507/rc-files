@@ -42,6 +42,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("ellisonleao/gruvbox.nvim")
 	use("nvim-lua/popup.nvim")
+	use("windwp/nvim-autopairs")
 
 	-- Snippets
 	use("hrsh7th/nvim-cmp")

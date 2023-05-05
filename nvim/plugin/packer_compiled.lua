@@ -136,6 +136,11 @@ _G.packer_plugins = {
     path = "/Users/michal/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
+  nerdcommenter = {
+    loaded = true,
+    path = "/Users/michal/.local/share/nvim/site/pack/packer/start/nerdcommenter",
+    url = "https://github.com/preservim/nerdcommenter"
+  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/Users/michal/.local/share/nvim/site/pack/packer/start/nui.nvim",

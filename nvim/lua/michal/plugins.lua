@@ -49,6 +49,7 @@ return packer.startup(function(use)
 			require("colorizer").setup()
 		end
 	})
+	use("preservim/nerdcommenter")
 
 	-- Snippets
 	use("hrsh7th/nvim-cmp")

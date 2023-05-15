@@ -67,7 +67,7 @@ return packer.startup(function(use)
 	use({
 		"L3MON4D3/LuaSnip",
 		-- follow latest release.
-		tag = "v<CurrentMajor>.*",
+		tag = "v1.*",
 		-- install jsregexp (optional!:).
 		run = "make install_jsregexp"
 	})
